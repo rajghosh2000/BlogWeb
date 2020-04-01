@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<header class="masthead" style="background-image: url( '  {{url_for('static',filename='img/admin-im.jpg')}}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>ADMIN PANEL </h1>
+            <span class="subheading">MANAGE YOUR POSTS </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <a href="/edit/0"><button class="btn btn-primary">ADD A NEW POST</button></a>
+        <a href="/logout"><button class="btn btn-primary">Logout</button></a>
+        <hr>
+
+
+
+        <h3>Upload File</h3>
+            <form action="/uploader" method ="post" enctype="multipart/form-data">
+            
+            <input type="file" name="file1">
+            <button class="btn btn-primary">Submit</button>
+            
+            </form>
+            <hr>
+
+        <h3>EDIT POSTS</h3>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Sno</th>
+                <th>Title</th>
+                <th>Date</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                {% for i in posts %}
+
+              <tr>
+                <td>{{i.sno}}</td>
+                <td>{{i.subtitle}}</td>
+                <td>{{i.date}}</td>
+                <td><a href="/edit/{{i.sno}}"><button class="btn btn-primary">EDIT</button></a></td>
+                <td><a href="/delete/{{i.sno}}"><button class="btn btn-primary">DELETE</button></a></td>
+              </tr>
+
+                {% endfor %}
+            </tbody>
+          </table>
+       
+       </div>
+    </div>
+  </div>
+
+
+{% endblock %}

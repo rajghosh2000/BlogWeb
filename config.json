@@ -1,0 +1,21 @@
+{
+    "params":
+    {
+        "local_server":"True",
+        "local_uri": "mysql://root:@localhost/react",
+        "prod_uri": "mysql://root:@localhost/react",
+        "fb_url":"https://facebook.com/react",
+        "tw_url":"https://twitter.com/react",
+        "git_url":"https://github.com/react",
+        "blog_name":"REACT",
+        "tag_line":"Come lets experience it",
+        "gmail-user":"rikghosh2075@gmail.com",
+        "gmail-password":"rik20750002ghosh",
+        "about_txt":"Hello its Raj, Creating my first application using flask and database from phpmyadmin ... hope i can make a good app",
+        "no_of_posts":2,
+        "admin-img":"admin-img.jpg",
+        "admin_user":"rajdeep",
+        "admin_password": "2507",
+        "upload_location":"C://Python36//PYTHON WORKOUTS//Python_flask_P1//static" 
+    }
+}
